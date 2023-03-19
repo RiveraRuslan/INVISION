@@ -1,0 +1,959 @@
+@import 'libs';
+@import 'vars';
+@import 'global';
+@import 'fonts';
+// @media(max-width: 1200px) {}
+/*=== # Header Start # ===*/
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0px 20px;
+}
+.header__logo {
+  margin-right: 140px;
+  @media (max-width: 1800px) {
+    margin-right: 0px;
+  }
+  @media (max-width: 1000px) {
+    order: 1;
+    z-index: 10;
+  }
+}
+.menu__btn {
+  display: none;
+}
+.menu__list {
+  display: flex;
+}
+.menu__list-item + .menu__list-item {
+  margin-left: 50px;
+  @media (max-width: 1650px) {
+    margin-left: 30px;
+  }
+}
+.menu__list-link {
+  font-family: 'Ristretto Pro';
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 35px;
+  color: #075066;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    color: #e84f35;
+  }
+  @media (max-width: 1800px) {
+    font-size: 28px;
+  }
+}
+.header__social {
+  margin-left: 20px;
+}
+.menu__social {
+  display: flex;
+}
+.menu__social.mob {
+  display: none;
+}
+.menu__social-item + .menu__social-item {
+  margin-left: 20px;
+}
+.menu__social-link {
+  max-width: 28px;
+  transition: all 0.3s;
+  &:hover {
+    transform: translateY(-3px);
+  }
+  @media (max-width: 1800px) {
+    img {
+      max-width: 24px;
+    }
+  }
+}
+.header__language {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 23px;
+  color: #075066;
+  margin-left: 15px;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.1);
+    color: #e84f35;
+  }
+  @media (max-width: 1000px) {
+    order: 1;
+    z-index: 10;
+  }
+}
+/*=== # Header End # ===*/
+
+/*=== # Section Start # ===*/
+.top {
+  background-color: #00b5a5;
+  background-image: url(../img/header-bg.png);
+  background-position: 85% bottom;
+  background-repeat: no-repeat;
+  padding-top: 130px;
+  padding-bottom: 35px;
+  // background-size: cover;
+  @media (max-width: 1580px) {
+    padding-top: 90px;
+    background-position: 100% 100%;
+  }
+  @media (max-width: 1400px) {
+    padding-top: 70px;
+  }
+  @media (max-width: 1100px) {
+    background-size: 40%;
+  }
+  @media (max-width: 992px) {
+    background-position: 170% 100%;
+    background-size: 60%;
+  }
+  @media (max-width: 610px) {
+    padding-top: 50px;
+    background-position: bottom center;
+    background-image: url(../img/header-mobBg.png);
+  }
+}
+.title {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 150px;
+  line-height: 174px;
+  color: #fff;
+  margin-bottom: 25px;
+  @media (max-width: 1400px) {
+    font-size: 135px;
+    line-height: 154px;
+  }
+  @media (max-width: 600px) {
+    font-size: 78px;
+    line-height: 100%;
+    margin-bottom: 0px;
+  }
+}
+.top__text {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 41px;
+  color: #fff;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  max-width: 735px;
+  @media (max-width: 1400px) {
+    font-size: 30px;
+    line-height: 41px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 41px;
+  }
+  @media (max-width: 1024px) {
+    font-size: 24px;
+    line-height: 150%;
+    max-width: 570px;
+  }
+  @media (max-width: 600px) {
+    font-size: 18px;
+    max-width: 330px;
+  }
+}
+/*=== # Section End # ===*/
+/*=== # Section Start # ===*/
+/*=== / Accordion Start / ===*/
+.accordion__item {
+  background-color: #075066;
+  &:nth-child(2) {
+    background-color: #f4a276;
+  }
+  &:nth-child(3) {
+    background-color: #fff;
+  }
+}
+.accordion__item-inner {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 610px) {
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    padding-bottom: 30px;
+  }
+}
+.inner-item__accordion {
+  background-color: #e84f35;
+}
+
+.accordion__item-wrap {
+  display: flex;
+  align-items: center;
+  @media (max-width: 610px) {
+    align-items: start;
+    flex-direction: column-reverse;
+  }
+}
+.accordion__item-title {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 116px;
+  position: relative;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 30px 0 30px;
+  @media (max-width: 1800px) {
+    font-size: 84px;
+    line-height: 100%;
+  }
+  @media (max-width: 1200px) {
+    font-size: 64px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 44px;
+  }
+  @media (max-width: 610px) {
+    font-size: 50px;
+    max-width: 250px;
+  }
+  @media (max-width: 360px) {
+    font-size: 40px;
+  }
+}
+.accordion__item-text {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #ffffff;
+  max-width: 393px;
+  @media (max-width: 1800px) {
+    font-size: 26px;
+    line-height: 130%;
+    max-width: 345px;
+  }
+  @media (max-width: 1200px) {
+    font-size: 22px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 16px;
+    max-width: 210px;
+  }
+}
+.accordion__item-box {
+  position: relative;
+  display: none;
+  color: #fff;
+  // padding-top: 70px;
+}
+.box-item__accordion {
+  // margin-top: 70px;
+  padding-bottom: 220px;
+  background-color: #fff;
+}
+.accordion__item-arrow {
+  width: 41px;
+  height: 41px;
+  margin-left: 40px;
+  transition: ease-in-out 0.2s;
+  @media (max-width: 1200px) {
+    width: 28px;
+    height: 28px;
+    margin-left: 20px;
+  }
+  @media (max-width: 610px) {
+    margin-left: 0px;
+  }
+}
+.accordion__item.questions__item--active {
+  .accordion__item-box {
+    display: block;
+    animation: showNav 250ms ease-in-out both;
+  }
+  .accordion__item-arrow {
+    transform: rotate(180deg);
+    @media (max-width: 610px) {
+      transform: rotate(90deg);
+    }
+  }
+}
+@keyframes showNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.accordion__spread {
+  display: flex;
+  align-items: center;
+}
+.accordion__spread-text {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  color: #fff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 30px;
+  margin-top: 25px;
+  img {
+    margin-right: 10px;
+    @media (max-width: 1200px) {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  span {
+    font-family: 'Ristretto Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    color: #e84f35;
+    margin-left: 10px;
+    @media (max-width: 1850px) {
+      font-size: 35px;
+      line-height: 100%;
+    }
+    @media (max-width: 1200px) {
+      font-size: 28px;
+    }
+  }
+  .accordion__spread-percent {
+    color: #075066;
+  }
+  @media (max-width: 1200px) {
+    font-size: 42px;
+    line-height: 100%;
+  }
+}
+.accordion__spread {
+  display: flex;
+  align-items: center;
+}
+.accordion__spread-ico {
+  margin-left: 35px;
+  @media (max-width: 1200px) {
+    max-width: 36px;
+  }
+  @media (max-width: 610px) {
+    display: none;
+  }
+}
+.accordion__item-box-top {
+  @media (max-width: 610px) {
+    display: flex !important;
+    flex-direction: row-reverse;
+    margin-top: 30px;
+  }
+}
+.accordion__item-back {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  display: none;
+  color: #fff;
+  @media (max-width: 610px) {
+    display: block;
+    margin-left: 15px;
+  }
+}
+.accordion__item-titlesub,
+.accordion__item-subtitle {
+  display: none;
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #075066;
+  @media (max-width: 610px) {
+    display: block;
+  }
+}
+.accordion__item-titlesub {
+  display: block;
+  font-size: 55px;
+  line-height: 64px;
+  text-align: center;
+  @media (max-width: 1400px) {
+    font-size: 50px;
+    line-height: 100%;
+  }
+  @media (max-width: 1000px) {
+    font-size: 36px;
+  }
+  @media (max-width: 610px) {
+    display: none;
+  }
+}
+/*=== / Accordion(ПРОГРАММЫ ЛОЯЛЬНОСТИ) On-Start / ===*/
+.accordion__item-carts {
+  display: flex;
+  align-items: baseline;
+}
+.accordion__item-cart {
+  padding: 20px 30px;
+  border: 1px solid transparent;
+  border-radius: 30px;
+  text-align: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  @media (max-width: 1100px) {
+    border: 1px solid white;
+    width: 230px;
+    height: 400px;
+  }
+  @media (max-width: 610px) {
+    &:nth-child(2),
+    &:nth-child(3) {
+      background-color: #00b5a5;
+    }
+    &:nth-child(4) {
+      background-color: #f4a276;
+    }
+  }
+}
+.accordion__item-img {
+  margin-bottom: 20px;
+  @media (max-width: 1100px) {
+    max-width: 130px;
+    margin: 0 auto;
+    transform: translateY(-40px);
+  }
+}
+.accordion__item-cart + .accordion__item-cart {
+  @media (max-width: 1100px) {
+    margin-left: 30px;
+  }
+}
+.accordion__item-statistic {
+  margin-right: 50px;
+  position: relative;
+  top: 39px;
+}
+.accordion__item-statistic-textmin {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 50px;
+  @media (max-width: 1100px) {
+    font-size: 16px;
+  }
+}
+.textmin-statistic-item__accordion {
+  @media (max-width: 1100px) {
+    margin-top: 100px;
+  }
+}
+.accordion__item-cart-textBottom,
+.accordion__item-statistic-text,
+.accordion__item-cart-text {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 25px;
+  color: #ffffff;
+  @media (max-width: 1100px) {
+    font-size: 40px;
+    line-height: 47px;
+  }
+}
+.accordion__item-statistic-text {
+  @media (max-width: 1100px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+.accordion__item-cart-textBottom {
+  margin-top: 50px;
+  @media (max-width: 1100px) {
+    font-size: 21px;
+    line-height: 25px;
+    margin-top: 20px;
+  }
+  @media (max-width: 610px) {
+    text-align: center;
+  }
+}
+.accordion__item-cart-text + .accordion__item-cart-text,
+.accordion__item-statistic-text + .accordion__item-statistic-text {
+  margin-top: 20px;
+}
+.accordion__item-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 80px;
+}
+.accordion__item-wrapp {
+  display: flex;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #fff;
+  @media (max-width: 1100px) {
+    padding-top: 80px;
+  }
+}
+.accordion__item-cart-text.accordion--color {
+  color: #00b5a5;
+  @media (max-width: 610px) {
+    color: #f4a276;
+  }
+}
+.accordion__item-cart-text.accordion--color.color--accordion {
+  @media (max-width: 610px) {
+    color: #fff;
+  }
+}
+@media (max-width: 1100px) {
+  .accordion__item-wrapper {
+    overflow-x: scroll;
+  }
+  .accordion__item-wrapp {
+    min-width: 850px;
+  }
+}
+/*=== / Accordion(ПРОГРАММЫ ЛОЯЛЬНОСТИ) On-End / ===*/
+/*=== / Accordion(ПРЕСЕЙЛЫ ДО ОФИЦИАЛЬНОГО ЛИСТИНГА) On-Start / ===*/
+.accordion__statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+  grid-gap: 25px;
+}
+.accordion__tabls {
+  text-align: end;
+}
+.accordion__tabl {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #075066;
+  padding-bottom: 6px;
+  &:nth-child(1) {
+    padding-top: 18px;
+    border-top: 2px solid #075066;
+  }
+}
+.accordion__tabl-title,
+.accordion__tabl-num,
+.accordion__tabl-num-result {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 35px;
+  color: #075066;
+  @media (max-width: 1200px) {
+    font-size: 20px;
+  }
+  @media (max-width: 576px) {
+    font-size: 24px;
+  }
+  @media (max-width: 330px) {
+    font-size: 22px;
+  }
+}
+.bold {
+  font-weight: 700;
+}
+.accordion__tabl-num-result {
+  display: inline;
+  border-bottom: 1px solid #075066;
+}
+.accordion__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 0 35px;
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+  @media (max-width: 600px) {
+    padding: 35px 0 35px;
+  }
+}
+.accordion__qr {
+  @media (max-width: 1200px) {
+    display: none;
+  }
+}
+.accordion__takes {
+  max-width: 455px;
+}
+.accordion__subscribers {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 57px;
+  color: #075066;
+  margin-top: 5px;
+  @media (max-width: 1200px) {
+    font-size: 42px;
+    line-height: 48px;
+  }
+  @media (max-width: 1000px) {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 600px) {
+    font-size: 34px;
+    line-height: 120%;
+  }
+}
+/*=== / Accordion(ПРЕСЕЙЛЫ ДО ОФИЦИАЛЬНОГО ЛИСТИНГА) On-End / ===*/
+/*=== / Accordion(ЗАКРЫТЫЙ ТРЕЙДИНГ КЛУБ) On-Start / ===*/
+.price {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+.price__cart {
+  max-width: 350px;
+  display: flex;
+  align-items: stretch;
+  position: relative;
+  margin-top: 70px;
+  @media (max-width: 1200px) {
+    max-width: 100%;
+    display: block;
+  }
+}
+@media (max-width: 1200px) {
+  .price__cart + .price__cart {
+    margin-top: 225px;
+  }
+}
+.price__box {
+  background-color: #00b5a5;
+  border-radius: 40px;
+  border: 2px solid #00b5a5;
+}
+.price__box-2 {
+  background-color: #e84f35;
+  border: 2px solid #e84f35;
+}
+.price__box-3 {
+  background-color: #075066;
+  border: 2px solid #075066;
+}
+.price__cartHead-title {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 100%;
+  text-align: end;
+  color: #075066;
+  @media (max-width: 765px) {
+    font-size: 45px;
+  }
+}
+.price__cartHead-img {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  @media (max-width: 1100px) {
+    top: -20px;
+    left: -15px;
+    max-width: 120px;
+  }
+}
+.price__cartTop {
+  background-color: #b0e7e2;
+  border-radius: 40px;
+  padding: 20px 20px;
+  border: 2px solid #00b5a5;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  transform: translate(-2px, -2px);
+  @media (max-width: 610px) {
+    padding: 20px 18px;
+  }
+}
+.price__cartTop-2 {
+  background-color: #f5c0b7;
+  border: 2px solid #e84f35;
+}
+.price__cartTop-3 {
+  background-color: #8ebbc9;
+  border: 2px solid #075066;
+}
+.price__cartInfo {
+  background-color: #fff;
+  height: calc(100% - 13%);
+}
+.price__cartHead-price {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+  color: #ffffff;
+  margin-bottom: 3px;
+}
+.price__cartHead-subprice {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+  color: #ffffff;
+  margin-bottom: 18px;
+  display: block;
+  text-align: end;
+}
+.price__cartTop-subtext {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #075066;
+  margin-bottom: 5px;
+}
+.price__cartTop-text {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #075066;
+  @media (max-width: 610px) {
+    font-size: 16px;
+  }
+}
+.price__cartInfo {
+  background-color: #fff;
+  padding: 215px 25px 50px 25px;
+  border-radius: 40px;
+  @media (max-width: 610px) {
+    padding: 215px 18px 35px 18px;
+  }
+}
+.price__cartInfo-title {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 46px;
+  margin-bottom: 10px;
+  color: #00b5a5;
+  @media (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
+  @media (max-width: 610px) {
+    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 41px;
+  }
+  @media (max-width: 360px) {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+.price__cartInfo-title-2 {
+  color: #e84f35;
+}
+.price__cartInfo-title-3 {
+  color: #075066;
+}
+.price__cartInfo-item {
+  display: flex;
+  flex-direction: column;
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(2, 300fr);
+    grid-gap: 25px 50px;
+  }
+  @media (max-width: 610px) {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 0px;
+  }
+  color: #00b5a5;
+}
+.price__cartInfo-item-2 {
+  color: #e84f35;
+}
+.price__cartInfo-item-3 {
+  color: #075066;
+}
+.price__cartInfo-list + .price__cartInfo-list {
+  margin-top: 15px;
+  @media (max-width: 1200px) {
+    margin-top: 0px;
+  }
+  @media (max-width: 610px) {
+    margin-top: 15px;
+  }
+}
+.price__cartInfo-list-title {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.price__cartInfo-list-text {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  padding-left: 15px;
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 3px;
+    height: 3px;
+    left: 0px;
+    top: 8px;
+    background-color: #00b5a5;
+    border-radius: 100%;
+  }
+}
+.price__cartInfo-list-text-2::after {
+  background-color: #e84f35;
+}
+.price__cartInfo-list-text-3::after {
+  background-color: #075066;
+}
+.price__cartInfo-list-mintext {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 12px;
+}
+.price__cartPrice {
+  text-align: center;
+  padding-bottom: 10px;
+}
+.price__cartPrice-subtitle {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.price__cartPrice-title {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 58px;
+  color: #ffffff;
+  @media (max-width: 610px) {
+    font-size: 40px;
+  }
+}
+/*=== / Accordion(ЗАКРЫТЫЙ ТРЕЙДИНГ КЛУБ) On-End / ===*/
+/*=== / Accordion End / ===*/
+/*=== # Section End # ===*/
+/*=== # Footer Start # ===*/
+.footer {
+  margin: 60px 0px 35px;
+  padding: 30px 0;
+  border-top: 1px solid #075066;
+  border-bottom: 1px solid #075066;
+}
+.footer__logo {
+  align-self: start;
+  @media (max-width: 1050px) {
+    margin: 0 auto 30px auto;
+  }
+}
+.footer__nav {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1050px) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  @media (max-width: 600px) {
+    text-align: center;
+  }
+}
+.footer__list {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+.footer__link {
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s;
+  &:hover {
+    border-bottom: 1px solid #075066;
+  }
+}
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  max-width: 380px;
+  .menu__social {
+    margin-left: 0px;
+    justify-content: center;
+  }
+  @media (max-width: 1050px) {
+    max-width: 100%;
+  }
+}
+.footer__sub {
+  margin-top: 20px;
+  line-height: 120%;
+}
+.terms {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  color: #075066;
+  margin-bottom: 36px;
+  padding: 0 15px;
+}
+/*=== # Footer End # ===*/
+@import 'media';

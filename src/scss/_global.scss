@@ -1,0 +1,243 @@
+@import 'vars';
+.lock {
+  overflow: hidden;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  scroll-behavior: smooth; //Scroll
+}
+body {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-weight: 400;
+  background-color: #fff;
+  color: #075066;
+  font-size: 35px;
+  line-height: 41px;
+  min-width: 320px;
+  overflow-x: hidden;
+  position: relative;
+}
+.accordion__item,
+.container {
+  max-width: 100%;
+  padding: 0 22.4vw;
+  margin: 0 auto;
+  @media (max-width: 1920px) {
+    padding: 0 15.4vw;
+  }
+  @media (max-width: 1600px) {
+    padding: 0px 8vw;
+  }
+  @media (max-width: 1400px) {
+    padding: 0px 3vw;
+  }
+  @media (max-width: 1200px) {
+    padding: 0px 5vw;
+  }
+}
+.accordion__item.container-null {
+  padding: 0vw;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex-grow: 1;
+  padding-top: 91px;
+}
+/*=== / BTN Start / ===*/
+.top__wrap {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.top__live {
+  font-weight: 700;
+  color: #fff;
+  font-size: 30px;
+  line-height: 35px;
+  border-radius: 40px;
+  padding: 5px 12px;
+  background-color: #e84f35;
+  text-transform: uppercase;
+  margin-right: 10px;
+  @media (max-width: 600px) {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  @media (max-width: 330px) {
+    font-size: 14px;
+  }
+}
+.top__live-text {
+  font-weight: 700;
+  color: #fff;
+  font-size: 30px;
+  line-height: 35px;
+  @media (max-width: 620px) {
+    font-size: 18px;
+    line-height: 100%;
+  }
+  @media (max-width: 360px) {
+    font-size: 14px;
+  }
+}
+.buy__token {
+  font-size: 30px;
+  line-height: 35px;
+  background-color: #e84f35;
+  color: #fff;
+  padding: 8px 76px;
+  border-radius: 10px;
+  text-align: center;
+  transition: all 0.3s;
+  &:hover {
+    transform: scale(1.02);
+  }
+  @media (max-width: 600px) {
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 24px;
+    line-height: 100%;
+  }
+}
+.all__token {
+  font-family: 'Ristretto Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 39px;
+  background-color: #e84f35;
+  color: #fff;
+  border-radius: 40px;
+  padding: 4px 36px;
+  transition: all 0.3s;
+  text-align: center;
+  &:hover {
+    transform: scale(1.02);
+  }
+  @media (max-width: 600px) {
+    font-size: 28px;
+    line-height: 28px;
+    padding: 5px 5px;
+    width: 100%;
+  }
+  @media (max-width: 600px) {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.btn__global {
+  font-family: 'TT Norms';
+  font-style: normal;
+  font-size: 30px;
+  line-height: 35px;
+  background-color: transparent;
+  border: 2px solid #075066;
+  border-radius: 10px;
+  color: #075066;
+  transition: all 0.3s;
+  padding: 8px 60px;
+  text-align: center;
+  cursor: pointer;
+  &:hover {
+    color: #fff;
+    background-color: #075066;
+  }
+  @media (max-width: 610px) {
+    font-size: 26px;
+  }
+  @media (max-width: 360px) {
+    font-size: 22px;
+  }
+}
+.subscruve__btn {
+  padding: 8px 38.5px;
+}
+.price__btns {
+  & :nth-child(1) {
+    margin-top: 38px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 1200px) {
+    width: 100%;
+  }
+}
+.light__more-btn,
+.light__buy-btn {
+  border: 2px solid #00b5a5;
+  color: #00b5a5;
+  &:hover {
+    color: #fff;
+    background-color: #00b5a5;
+  }
+}
+.normal__more-btn,
+.normal__buy-btn {
+  border: 2px solid #e84f35;
+  color: #e84f35;
+  &:hover {
+    color: #fff;
+    background-color: #e84f35;
+  }
+}
+.full__more-btn,
+.full__buy-btn {
+  border: 2px solid #075066;
+  color: #075066;
+  &:hover {
+    color: #fff;
+    background-color: #075066;
+  }
+}
+.price__btns {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+  transform: translateY(100%);
+}
+/*=== / BTN End / ===*/
+
+.animation__flower {
+  max-width: 410px;
+  width: 100%;
+  position: absolute;
+  right: -180px;
+  @media (max-width: 1536px) {
+    max-width: 380px;
+    right: -170px;
+    top: 30px;
+  }
+  @media (max-width: 1400px) {
+    max-width: 300px;
+    right: -50px;
+    top: 50px;
+  }
+  @media (max-width: 1100px) {
+    display: none;
+  }
+  @media (max-width: 610px) {
+    max-width: 145px;
+    display: block;
+    top: -165px;
+    right: -13px;
+  }
+  @media (max-width: 360px) {
+    right: -20px;
+    max-width: 100px;
+  }
+}
+.animation__kitten {
+  max-width: 215px;
+  width: 100%;
+  @media (max-width: 1000px) {
+    order: -1;
+  }
+}
