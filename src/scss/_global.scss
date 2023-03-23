@@ -150,7 +150,7 @@ body {
     color: #fff;
     background-color: #075066;
   }
-  @media (max-width: 610px) {
+  @media (max-width: 700px) {
     font-size: 26px;
   }
   @media (max-width: 360px) {
@@ -223,15 +223,18 @@ body {
   @media (max-width: 1100px) {
     display: none;
   }
-  @media (max-width: 610px) {
+  @media (max-width: 700px) {
     max-width: 145px;
     display: block;
-    top: -165px;
+    top: -225px;
     right: -13px;
   }
   @media (max-width: 360px) {
     right: -20px;
     max-width: 100px;
+  }
+  @media (max-width: 320px) {
+    right: 0px;
   }
 }
 .animation__kitten {

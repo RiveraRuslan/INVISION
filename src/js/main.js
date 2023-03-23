@@ -26,12 +26,11 @@ menu.on('click', '.menu__list-link', function () {
 });
 
 //Accordion
-const questionInner = $('.accordion__item-inner');
 const questionItem = $('.accordion__item');
+const questionInner = $('.accordion__item-inner');
 
 questionInner.on('click', function () {
-  questionItem.removeClass('questions__item--active');
-  $(this).parent().addClass('questions__item--active');
+  $(this).closest(questionItem).toggleClass('questions__item--active');
 });
 
 //Animate
