@@ -91,6 +91,9 @@
   &:hover {
     transform: scale(1.1);
     color: #e84f35;
+    @media (max-width: 1000px) {
+    color: #075066;
+    }
   }
   @media (max-width: 1000px) {
     order: 1;
@@ -132,19 +135,20 @@
   font-family: 'Ristretto Pro';
   font-style: normal;
   font-weight: 700;
-  font-size: 150px;
-  line-height: 174px;
+  font-size: clamp(80px, 24vw, 150px);
+  line-height: 100%;
+  // font-size: 150px;
   color: #fff;
   margin-bottom: 25px;
-  @media (max-width: 1400px) {
-    font-size: 135px;
-    line-height: 154px;
-  }
-  @media (max-width: 600px) {
-    font-size: 78px;
-    line-height: 100%;
-    margin-bottom: 0px;
-  }
+  // @media (max-width: 1400px) {
+  //   // font-size: 135px;
+  //   // line-height: 154px;
+  // }
+  // @media (max-width: 600px) {
+  //   font-size: 78px;
+  //   line-height: 100%;
+  //   margin-bottom: 0px;
+  // }
 }
 .top__text {
   font-family: 'TT Norms';
@@ -156,21 +160,20 @@
   margin-top: 30px;
   margin-bottom: 40px;
   max-width: 735px;
-  @media (max-width: 1400px) {
-    font-size: 30px;
-    line-height: 41px;
-  }
+  font-size: clamp(18px, 4vw, 35px);
+  // @media (max-width: 1400px) {
+  //   font-size: 30px;
+  // }
+  // @media (max-width: 1024px) {
+  //   font-size: 24px;
+  // }
   @media (max-width: 1024px) {
-    font-size: 24px;
-    line-height: 41px;
-  }
-  @media (max-width: 1024px) {
-    font-size: 24px;
-    line-height: 150%;
+    // font-size: 24px;
+    line-height: 130%;
     max-width: 570px;
   }
   @media (max-width: 600px) {
-    font-size: 18px;
+    // font-size: 18px;
     max-width: 330px;
   }
 }
@@ -214,49 +217,33 @@
   font-family: 'Ristretto Pro';
   font-style: normal;
   font-weight: 700;
-  font-size: 100px;
+  font-size: clamp(40px, 5vw, 100px);
   line-height: 116px;
   position: relative;
   color: #fff;
   text-transform: uppercase;
   padding: 30px 0 30px;
   @media (max-width: 1800px) {
-    font-size: 84px;
     line-height: 100%;
   }
-  @media (max-width: 1200px) {
-    font-size: 64px;
-  }
-  @media (max-width: 1000px) {
-    font-size: 44px;
-  }
   @media (max-width: 700px) {
-    font-size: 50px;
-    max-width: 250px;
+    max-width: 210px;
     padding: 20px 0 20px;
-  }
-  @media (max-width: 360px) {
-    font-size: 40px;
   }
 }
 .accordion__item-text {
   font-family: 'TT Norms';
   font-style: normal;
   font-weight: 400;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: clamp(16px, 2vw, 30px);
+  line-height: 30px;
   color: #ffffff;
   max-width: 393px;
   @media (max-width: 1800px) {
-    font-size: 26px;
-    line-height: 130%;
     max-width: 345px;
   }
-  @media (max-width: 1200px) {
-    font-size: 22px;
-  }
   @media (max-width: 1000px) {
-    font-size: 16px;
+    line-height: 120%;
     max-width: 210px;
   }
 }
@@ -320,8 +307,8 @@
   font-family: 'Ristretto Pro';
   font-style: normal;
   font-weight: 700;
-  font-size: 60px;
-  line-height: 70px;
+  font-size: clamp(40px, 5vw, 60px);
+  line-height: 100%;
   color: #fff;
   align-items: center;
   justify-content: center;
@@ -331,32 +318,21 @@
   img {
     margin-right: 10px;
     @media (max-width: 1200px) {
-      width: 25px;
-      height: 25px;
+      width: clamp(20px, 5vw, 30px);
+      height: clamp(20px, 5vw, 30px);
     }
   }
   span {
     font-family: 'Ristretto Pro';
     font-style: normal;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 46px;
+    font-size: clamp(25px, 5vw, 40px);
+    line-height: 100%;
     color: #e84f35;
     margin-left: 10px;
-    @media (max-width: 1850px) {
-      font-size: 35px;
-      line-height: 100%;
-    }
-    @media (max-width: 1200px) {
-      font-size: 28px;
-    }
   }
   .accordion__spread-percent {
     color: #075066;
-  }
-  @media (max-width: 1200px) {
-    font-size: 42px;
-    line-height: 100%;
   }
 }
 .accordion__spread {
@@ -365,8 +341,8 @@
 }
 .accordion__spread-ico {
   margin-left: 35px;
-  @media (max-width: 1200px) {
-    max-width: 36px;
+  @media (max-width: 1600px) {
+    width: clamp(50px, 5vw, 120px)
   }
   @media (max-width: 700px) {
     display: none;
@@ -407,16 +383,8 @@
 }
 .accordion__item-titlesub {
   display: block;
-  font-size: 55px;
-  line-height: 64px;
-  text-align: center;
-  @media (max-width: 1400px) {
-    font-size: 50px;
-    line-height: 100%;
-  }
-  @media (max-width: 1000px) {
-    font-size: 36px;
-  }
+  font-size: clamp(35px, 4vw, 64px);
+  line-height: 100%;
   @media (max-width: 700px) {
     display: none;
   }
